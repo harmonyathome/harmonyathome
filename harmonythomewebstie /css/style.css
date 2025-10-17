@@ -2782,7 +2782,14 @@ Back To Top Section
     /*background-color: $white;*/ }
     .header-1 .navbar-main .navbar-brand {
       position: relative;
-      top: 0; } }
+      top: 0; }
+    .navbar-toggler {
+      display: block !important;
+      margin: 8px auto !important;
+      position: relative !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    } }
 /**
  * 5. - SECTION
  * -----------------------------------------------------------------------------
