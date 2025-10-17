@@ -43,6 +43,14 @@
 		.topbar .dropdown:hover > .dropdown-menu {
 			display: block !important;
 		}
+		@media (max-width: 768px) {
+  .spacer-90 { display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
+  .about-scrapbook {
+    width: 90% !important;
+    max-width: 90% !important;
+    margin-top: 24px !important;
+  }
+}
 	</style>
 
     <script src="js/vendor/modernizr.min.js"></script>
@@ -166,16 +174,27 @@
 						
 						<div class="spacer-90"></div>
 					</div>
-					<div class="col-sm-12 col-md-12 col-lg-5">
+					<div class="col-sm-12 col-md-12 col-lg-5 mobile-image-fix">
 						<div style="position: relative; display: flex; justify-content: flex-end; align-items: flex-start; padding: 0; margin-top: -100px; margin-right: -50px; margin-left: -20px;">
-							<img src="images/harmony@home scrapbook.png?v=123456" alt="Harmony@Home Scrapbook Memories" class="img-fluid" style="
-								box-shadow: 0 20px 40px rgba(0,0,0,0.3) !important;
-								border-radius: 8px !important;
-								width: 120% !important;
-								max-width: 120% !important;
-								height: auto !important;
-								z-index: 5 !important;
+							<img src="images/harmony@home scrapbook.png?v=123456" alt="Harmony@Home Scrapbook Memories" class="img-fluid about-scrapbook" style="
+								box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+								border-radius: 8px;
+								width: 120%;
+								max-width: 120%;
+								height: auto;
+								z-index: 5;
 							">
+							<style>
+								@media (max-width: 768px) {
+									.about-scrapbook {
+										width: 75% !important;
+										max-width: 75% !important;
+									}
+									.mobile-image-fix div {
+										margin-top: -50px !important;
+									}
+								}
+							</style>
 						</div>
 						<style>
 							@media (max-width: 1199px) {
@@ -203,19 +222,19 @@
 							}
 							@media (max-width: 767px) {
 								.col-sm-12.col-md-12.col-lg-5 > div {
-									margin-top: 30px !important;
+									margin-top: -20px !important;
 									padding: 20px !important;
 								}
 								.col-sm-12.col-md-12.col-lg-5 img {
-									width: 65% !important;
-									max-width: 65% !important;
+									width: 75% !important;
+									max-width: 75% !important;
 									box-shadow: 0 12px 25px rgba(0,0,0,0.2) !important;
 								}
 							}
 							@media (max-width: 480px) {
 								.col-sm-12.col-md-12.col-lg-5 img {
-									width: 55% !important;
-									max-width: 55% !important;
+									width: 70% !important;
+									max-width: 70% !important;
 									box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
 								}
 							}

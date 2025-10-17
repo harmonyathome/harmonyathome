@@ -2882,6 +2882,7 @@ Back To Top Section
   padding: 15px 0;
   color: #ffffff;
   text-align: center; }
+
   .promo-banner .promo-content {
     display: flex;
     align-items: center;
@@ -2969,7 +2970,7 @@ Back To Top Section
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 15px;
 }
 
@@ -3003,12 +3004,36 @@ Back To Top Section
 
 @media (max-width: 768px) {
   .literacy-banner .literacy-content {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   
   .literacy-banner-text {
+    font-size: 11px;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .btn-literacy-banner {
+    font-size: 10px;
+    padding: 6px 12px;
+    flex-shrink: 0;
+  }
+}
+
+/* Medium screens - ensure it doesn't wrap */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .literacy-banner-text {
     font-size: 14px;
+    flex: 1;
+  }
+  
+  .btn-literacy-banner {
+    font-size: 12px;
+    padding: 6px 16px;
+    flex-shrink: 0;
   }
 }
 
@@ -4214,5 +4239,282 @@ Back To Top Section
  * 7. - RESPONSIVE
  * -----------------------------------------------------------------------------
  */
+
+/* MOBILE ONLY - STEP 1: Prevent horizontal scrolling */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+    
+    .container, .container-fluid {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    * {
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* STEP 2: Reposition banner image to the left */
+    .banner.responsive-banner .banner-image {
+        object-position: left center !important;
+    }
+    
+    /* Add light overlay over banner image - mobile only */
+    .banner.responsive-banner {
+        position: relative !important;
+    }
+    
+    .banner.responsive-banner .banner-container::after {
+        content: "";
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background-color: rgba(255, 255, 255, 0.65) !important; /* Much whiter overlay */
+        z-index: 2 !important; /* Above banner image but below content */
+        pointer-events: none !important; /* Don't interfere with clicks */
+    }
+    
+    /* STEP 3: Resize and reposition logo for mobile */
+    .new-logo-container {
+        position: absolute !important;
+        top: 160px !important; /* Move down more from 140px to 160px */
+        left: 50% !important; /* Start from center */
+        right: auto !important; /* Override inline style */
+        z-index: 99999 !important;
+        display: block !important;
+        /* Remove transform here since we're applying it to the image */
+    }
+    
+    /* Use more specific selector to override inline styles */
+    .banner .new-logo-container img.new-logo[style] {
+        transform: scale(0.65) translateX(-50%) !important; /* Scale up from 0.6 to 0.65 and center */
+        transform-origin: left top !important; /* Scale from left-top for proper centering */
+        width: 700px !important; /* Keep original width but scale it down */
+        height: auto !important;
+        display: block !important;
+        opacity: 0.95 !important;
+        max-width: none !important; /* Let transform handle the sizing */
+    }
+    
+    /* Also target the text container that has inline width */
+    .new-logo-container div[style*="width: 700px"] {
+        transform: scale(0.65) translateX(-50%) !important; /* Scale up text too to match */
+        transform-origin: left top !important; /* Match the image centering */
+        width: 700px !important; /* Keep original width but scale it down */
+        text-align: center !important; /* Force center alignment */
+        position: relative !important;
+        left: 0 !important; /* Reset any offset */
+        margin: 0 auto !important; /* Center the container */
+    }
+    
+    /* Hide the original text elements on mobile */
+    .new-logo-container div[style*="text-align: center"],
+    .new-logo-container div[style*="margin-top: 5px"],
+    .new-logo-container div[style*="margin-top: 40px"] {
+        display: none !important; /* Hide all original text */
+    }
+    
+    /* Create new mobile-only text after the logo */
+    .new-logo-container::after {
+        content: "EXCLUSIVELY PROVIDING";
+        display: block !important;
+        position: absolute !important;
+        top: 220px !important; /* Move down from 200px to 220px */
+        left: 0 !important;
+        right: 0 !important;
+        width: 100vw !important; /* Full screen width */
+        text-align: center !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: bold !important;
+        font-size: 20px !important; /* Reduced from 24px to 20px */
+        color: #a5c9f5 !important; /* Slightly darker from #b3d9ff to #a5c9f5 */
+        text-transform: uppercase !important;
+        letter-spacing: 2px !important;
+        z-index: 99999 !important;
+        margin-left: -50vw !important; /* Center on screen */
+        margin-right: -50vw !important;
+        transform: none !important; /* Remove any transforms */
+    }
+    
+    /* Remove the problematic carousel - we'll create a simpler version */
+    .banner::before {
+        display: none !important;
+    }
+    
+    /* Create a simple text carousel that just fades between phrases */
+    .banner::after {
+        content: "HIGH PROFILE SUPPORT";
+        display: block !important;
+        position: absolute !important;
+        top: 200px !important; /* Move up from 210px to 200px */
+        left: 0 !important;
+        right: 0 !important;
+        width: 100vw !important;
+        text-align: center !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: bold !important;
+        font-size: 18px !important;
+        color: #4a90e2 !important; /* Changed from #b3d9ff to #4a90e2 (darker blue) */
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+        z-index: 99998 !important;
+        animation: fadeCarousel 15s infinite !important;
+    }
+    
+    /* Simple fade animation between phrases */
+    @keyframes fadeCarousel {
+        0%, 18% { content: "HIGH PROFILE SUPPORT"; opacity: 1; }
+        19%, 19.5% { opacity: 0; }
+        20%, 38% { content: "ON-CALL BACK UP CARE"; opacity: 1; }
+        39%, 39.5% { opacity: 0; }
+        40%, 58% { content: "PART-TIME PROVIDERS"; opacity: 1; }
+        59%, 59.5% { opacity: 0; }
+        60%, 78% { content: "PRIVATE TRAVEL CARE"; opacity: 1; }
+        79%, 79.5% { opacity: 0; }
+        80%, 98% { content: "NEWBORN SPECIALIST"; opacity: 1; }
+        99%, 100% { opacity: 0; }
+    }
+    
+    /* Add phone number below carousel */
+    .banner::before {
+        content: "CALL NOW: (224) 304-6320" !important;
+        display: block !important;
+        position: absolute !important;
+        top: 280px !important; /* Move down from 240px to 280px */
+        left: 0 !important;
+        right: 0 !important;
+        width: 100vw !important;
+        text-align: center !important;
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: bold !important;
+        font-size: 18px !important;
+        color: #c5606b !important; /* Dark pink color from desktop */
+        text-transform: uppercase !important;
+        text-decoration: underline !important;
+        z-index: 99997 !important;
+    }
+    
+    /* Center images in Build Your Village and Join The Team sections - mobile only */
+    .section .img-fluid.img-border {
+        margin: 0 auto !important;
+        display: block !important;
+        max-width: calc(100vw - 40px) !important; /* Account for padding and scroll bar */
+        width: auto !important;
+        padding: 0 20px !important; /* Add side padding to prevent touching edges */
+        box-sizing: border-box !important;
+    }
+    
+    /* Move section titles down on mobile - Build Your Village and Join The Team */
+    .build-village-heading,
+    .find-job-heading {
+        margin-top: 30px !important; /* Add space above the titles */
+    }
+    
+    /* Reduce negative space after GET STARTED buttons on mobile */
+    .spacer-30 {
+        height: 0px !important; /* Remove spacer completely */
+        display: none !important;
+    }
+    
+    .spacer-10 {
+        height: 0px !important; /* Remove spacer completely */
+        display: none !important;
+    }
+    
+    /* Also reduce section padding on mobile */
+    .section {
+        padding: 20px 0 !important; /* Reduce from default section padding */
+    }
+    
+    .content-wrap {
+        padding: 10px 0 !important; /* Reduce content wrap padding */
+    }
+    
+    /* Holiday sale banner - simple single slide animation on mobile */
+    .promo-banner .promo-text {
+        font-size: 12px !important; /* Smaller text to fit on one line */
+        animation: singleSlide 15s infinite linear !important;
+        white-space: nowrap !important; /* Force single line */
+    }
+    
+    .promo-banner .promo-btn {
+        display: none !important; /* Hide button completely on mobile */
+    }
+    
+    /* Bottom banner - smaller text on mobile */
+    .cta-spacer-text {
+        font-size: 12px !important; /* Smaller text to fit on one line */
+    }
+    
+    /* Make bottom banner (cta-spacer) thinner on mobile */
+    .cta-spacer {
+        min-height: 25px !important; /* Much thinner banner */
+        padding: 5px 0 !important; /* Add small padding */
+    }
+    
+    .cta-spacer-content {
+        min-height: 25px !important; /* Match parent height */
+        padding: 0 !important; /* Remove any padding */
+    }
+    
+    /* Simple single slide animation */
+    @keyframes singleSlide {
+        0% { transform: translateX(100%); } /* Start off-screen right */
+        100% { transform: translateX(-100%); } /* Slide completely off-screen left */
+    }
+}
+
+/* Apply same sliding animation to ALL screen sizes (desktop and mobile) */
+.promo-banner .promo-text {
+    animation: singleSlide 15s infinite linear !important;
+    white-space: nowrap !important; /* Force single line */
+}
+
+.promo-banner .promo-btn {
+    display: none !important; /* Hide button on all screen sizes */
+}
+
+/* Bottom banner sliding animation for all devices */
+.cta-spacer-text {
+    animation: singleSlide 15s infinite linear !important;
+    white-space: nowrap !important; /* Force single line */
+    display: inline-block !important; /* Ensure proper animation */
+}
+
+/* Single slide animation for all devices */
+@keyframes singleSlide {
+    0% { transform: translateX(100%); } /* Start off-screen right */
+    100% { transform: translateX(-100%); } /* Slide completely off-screen left */
+}
+
+/* Mobile Image Sizing for Teachers and Classes Pages */
+@media (max-width: 767px) {
+	.faq-image {
+		max-width: 90% !important;
+		max-height: 200px !important;
+	}
+	.provider-image {
+		max-width: 90% !important;
+		max-height: 200px !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.faq-image {
+		max-width: 95% !important;
+		max-height: 220px !important;
+	}
+	.provider-image {
+		max-width: 95% !important;
+		max-height: 220px !important;
+	}
+}
 
 /*# sourceMappingURL=style.css.map */
