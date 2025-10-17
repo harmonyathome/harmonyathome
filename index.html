@@ -16,30 +16,35 @@
 	<!-- ==============================================
 	Favicons
 	=============================================== -->
-	<link rel="shortcut icon" href="images/newfavicon.png" type="image/png">
-	<link rel="icon" href="images/newfavicon.png" type="image/png" sizes="32x32">
-	<link rel="icon" href="images/newfavicon.png" type="image/png" sizes="16x16">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="180x180">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="152x152">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="144x144">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="120x120">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="114x114">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="72x72">
+	<link rel="shortcut icon" href="newfavicon.png" type="image/png">
+	<link rel="icon" href="newfavicon.png" type="image/png" sizes="32x32">
+	<link rel="icon" href="newfavicon.png" type="image/png" sizes="16x16">
+	<link rel="apple-touch-icon" href="newfavicon.png" sizes="180x180">
+	<link rel="apple-touch-icon" href="newfavicon.png" sizes="152x152">
+	<link rel="apple-touch-icon" href="newfavicon.png" sizes="144x144">
+	<link rel="apple-touch-icon" href="newfavicon.png" sizes="120x120">
+	<link rel="apple-touch-icon" href="newfavicon.png" sizes="114x114">
+	<link rel="apple-touch-icon" href="newfavicon.png" sizes="72x72">
 	
 	<!-- ==============================================
 	CSS VENDOR
 	=============================================== -->
-	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor/owl.carousel.min.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor/owl.theme.default.min.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor/magnific-popup.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor/animate.min.css">
+	<!-- Bootstrap CSS - using CDN since local file not found -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<!-- Owl Carousel CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<!-- Magnific Popup CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+	<!-- Animate CSS CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	
 	<!-- ==============================================
 	Custom Stylesheet
 	=============================================== -->
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
 	
 	<style>
 		/* MOBILE OPTIMIZATION */
@@ -190,7 +195,7 @@
 		}
 	</style>
 	
-    <script src="js/vendor/modernizr.min.js"></script>
+    <script src="modernizr.min.js"></script>
 
 </head>
 
@@ -264,11 +269,11 @@
     <div class="banner video-banner">
     	<div class="video-container">
 	        <video autoplay muted loop playsinline>
-	            <source src="images/ALL NEW HARMONY@HOME WEB BANNER.mp4" type="video/mp4">
+	            <source src="ALL NEW HARMONY@HOME WEB BANNER.mp4" type="video/mp4">
 	            Your browser does not support the video tag.
 	        </video>
 	        <!-- Fallback image for browsers that don't support video -->
-	        <img src="images/dummy-img-1920x900.jpg" alt="Harmony@Home Banner" class="fallback-image">
+	        <img src="dummy-img-1920x900.jpg" alt="Harmony@Home Banner" class="fallback-image">
     	</div>
     </div>	
 
@@ -315,7 +320,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 col-md-12 col-lg-6">
-						<img src="images/nanny ohots_LE_upscale_balanced_x4.jpg" alt="Professional Nanny Care" class="img-fluid img-border">
+						<img src="nanny ohots_LE_upscale_balanced_x4.jpg" alt="Professional Nanny Care" class="img-fluid img-border">
 					</div>
 					<div class="col-sm-12 col-md-12 col-lg-6">
 						<h2 class="section-heading build-village-heading">
@@ -359,7 +364,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12 col-md-12 col-lg-6 order-lg-2">
-						<img src="images/nannyproviders_LE_upscale_balanced_x4.jpg" alt="Professional childcare providers" class="img-fluid img-border">
+						<img src="nannyproviders_LE_upscale_balanced_x4.jpg" alt="Professional childcare providers" class="img-fluid img-border">
 					</div>
 					<div class="col-sm-12 col-md-12 col-lg-6 order-lg-1">
 						<h2 class="section-heading find-job-heading" style="color: #edb3b9;">
@@ -517,16 +522,17 @@
 	</div>
 	
 	<!-- JS VENDOR -->
-	<script src="js/vendor/jquery.min.js"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="js/vendor/owl.carousel.js"></script>
-	<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="owl.carousel.js"></script>
+	<script src="jquery.magnific-popup.min.js"></script>
 
 	<!-- SENDMAIL -->
-	<script src="js/vendor/validator.min.js"></script>
-	<script src="js/vendor/form-scripts.js"></script>
+	<script src="validator.min.js"></script>
+	<script src="form-scripts.js"></script>
 
-	<script src="js/script.js"></script>
+	<!-- Custom JS - create if needed -->
+	<!-- <script src="script.js"></script> -->
 
 </body>
 </html>
