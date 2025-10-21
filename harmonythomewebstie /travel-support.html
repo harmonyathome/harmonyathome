@@ -40,6 +40,49 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
     <script src="js/vendor/modernizr.min.js"></script>
+        <style>
+        @media (max-width: 767px) {
+            .section .container .row {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .section .container .row .col-12.text-center {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 100% !important;
+                padding: 0 !important;
+            }
+            .section .container .row .col-12.text-center img {
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                margin-top: 18px !important;
+                margin-bottom: 0 !important;
+                max-width: 80vw !important;
+            }
+        }
+        </style>
+
+            <style>
+            @media (max-width: 767px) {
+                .section .container .row.text-center img {
+                    display: block;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                    margin-top: 18px !important;
+                    margin-bottom: 0 !important;
+                    max-width: 80vw !important;
+                }
+                .section .container .row.text-center {
+                    justify-content: center !important;
+                    align-items: center !important;
+                }
+            }
+            </style>
 
 </head>
 

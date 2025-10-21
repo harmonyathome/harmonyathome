@@ -56,6 +56,29 @@
 		.topbar .dropdown:hover > .dropdown-menu {
 			display: block !important;
 		}
+
+			/* Mobile header logo perfect centering for Teachers/Families page */
+			@media (max-width: 767.98px) {
+				.section.page-header .container .row {
+					display: flex !important;
+					justify-content: center !important;
+					align-items: center !important;
+				}
+				.section.page-header .container .row .col-12.text-center {
+					display: flex !important;
+					flex-direction: column !important;
+					align-items: center !important;
+					justify-content: center !important;
+					padding: 0 !important;
+				}
+				.section.page-header .container .row .col-12.text-center img[alt="Harmony@Home Logo"] {
+				margin: -16px auto 0 auto !important;
+				display: block !important;
+				max-width: 80vw !important;
+				height: auto !important;
+				/* margin-top: 0px !important; */
+				}
+			}
 	</style>
 
     <script src="js/vendor/modernizr.min.js"></script>

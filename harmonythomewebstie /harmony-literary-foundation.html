@@ -42,6 +42,51 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	
 	<style>
+@media (max-width: 767px) {
+	.page-header .col-12.text-center img {
+		margin-top: -12px !important;
+	}
+	.slideshow-container {
+		width: 100vw !important;
+		max-width: 100vw !important;
+		height: 80vw !important;
+		max-height: 80vw !important;
+		min-height: 80vw !important;
+		border-radius: 10px;
+		overflow: hidden;
+		margin: 0 auto;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	}
+	.slides-wrapper {
+		width: 600%;
+		min-width: 100vw;
+		height: 80vw !important;
+		max-height: 80vw !important;
+		display: flex;
+		transition: transform 0.5s ease-in-out;
+	}
+	.slide {
+		flex: 0 0 100%;
+		max-width: 100vw;
+		height: 80vw !important;
+		max-height: 80vw !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+	}
+	.slide img {
+		width: 80vw !important;
+		height: 80vw !important;
+		max-width: 80vw !important;
+		max-height: 80vw !important;
+		object-fit: cover;
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+		margin: 0 auto;
+		display: block;
+	}
+}
 		/* Slideshow Styles */
 		.slideshow-container {
 			overflow: hidden;
@@ -210,10 +255,6 @@
 									<img src="images/black-students-reading-book-publication_53876-1158883.jpg" alt="Students Reading" class="img-fluid" style="width: 100%; height: 300px; object-fit: cover;">
 								</div>
 							</div>
-							
-							<!-- Navigation arrows -->
-							<a class="prev" onclick="changeSlide(-1)" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; padding: 10px 15px; border-radius: 50%; cursor: pointer; font-size: 18px; color: #333; transition: all 0.3s ease;">&lt;</a>
-							<a class="next" onclick="changeSlide(1)" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; padding: 10px 15px; border-radius: 50%; cursor: pointer; font-size: 18px; color: #333; transition: all 0.3s ease;">&gt;</a>
 							
 							<!-- Dots indicator -->
 							<div class="dots-container" style="text-align: center; padding: 15px 0; background: rgba(0,0,0,0.1);">
@@ -395,53 +436,114 @@
 	
 	<script>
 		$(document).ready(function() {
-			let currentSlideIndex = 0;
+			const slides = $('.slide');
 			const dots = $('.dot');
-			const slidesWrapper = $('.slides-wrapper');
-			const totalSlides = 6;
-			
-			// Show specific slide by sliding
+			let currentSlideIndex = 0;
+			const totalSlides = slides.length;
+
+			// Hide all slides except the first
+			slides.hide().css({position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'});
+			$(slides[0]).show().css('position', 'relative');
+
 			function showSlide(index) {
-				const translateX = -index * (100 / totalSlides);
-				slidesWrapper.css('transform', `translateX(${translateX}%)`);
-				
-				// Remove active class from all dots first
-				dots.each(function() {
-					$(this).removeClass('active');
-					$(this).css('background-color', 'rgba(255,255,255,0.5)');
-				});
-				
-				// Add active class to current dot
-				$(dots[index]).addClass('active');
-				$(dots[index]).css('background-color', '#c5606b');
+				slides.stop(true, true).fadeOut(400);
+				$(slides[index]).fadeIn(400).css('position', 'relative');
+				// Dots
+				dots.removeClass('active').css('background-color', 'rgba(255,255,255,0.5)');
+				$(dots[index]).addClass('active').css('background-color', '#c5606b');
 			}
-			
-			// Next slide function
+
 			window.changeSlide = function(direction) {
 				currentSlideIndex += direction;
 				if (currentSlideIndex >= totalSlides) currentSlideIndex = 0;
 				if (currentSlideIndex < 0) currentSlideIndex = totalSlides - 1;
 				showSlide(currentSlideIndex);
 			};
-			
-			// Go to specific slide
+
 			window.currentSlide = function(index) {
 				currentSlideIndex = index - 1;
 				showSlide(currentSlideIndex);
 			};
-			
-			// Auto-advance slides
+
 			setInterval(function() {
 				currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
 				showSlide(currentSlideIndex);
 			}, 4000);
-			
-			// Initialize first slide - make sure only first dot is active
-			dots.removeClass('active');
-			dots.css('background-color', 'rgba(255,255,255,0.5)');
+
+			// Initialize
 			showSlide(0);
 		});
 	</script>
+
+	<style>
+@media (max-width: 767px) {
+  .slideshow-container {
+    overflow: hidden !important;
+    position: relative !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 80vw !important;
+    min-height: 80vw !important;
+    background: #fff;
+  }
+  .slides-wrapper.marquee {
+    display: flex !important;
+    width: auto !important;
+    animation: marquee-slide 18s linear infinite;
+  }
+  .slide {
+    flex: 0 0 auto !important;
+    width: 80vw !important;
+    height: 80vw !important;
+    margin-right: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .slide img {
+    width: 80vw !important;
+    height: 80vw !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin: 0 auto;
+    display: block;
+  }
+  @keyframes marquee-slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+}
+</style>
+<script>
+// Mobile-only: endless marquee effect for slideshow
+$(document).ready(function() {
+  if (window.innerWidth <= 767) {
+    $('.slides-wrapper').addClass('marquee');
+    // Remove fade/slide logic for mobile
+    $('.slide').css({position: 'relative', display: 'flex'});
+  }
+});
+</script>
+
+	<style>
+@media (max-width: 767px) {
+  .page-header .col-12.text-center img {
+    display: block !important;
+    margin: 0 auto !important;
+    max-width: 80vw !important;
+    height: auto !important;
+    float: none !important;
+    text-align: center !important;
+  }
+  .page-header .col-12.text-center {
+    text-align: center !important;
+    width: 100vw !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+}
+</style>
 
 </body>
 </html>

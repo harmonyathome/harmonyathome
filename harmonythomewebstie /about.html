@@ -14,15 +14,15 @@
 	<!-- ==============================================
 	Favicons
 	=============================================== -->
-	<link rel="shortcut icon" href="images/newfavicon.png" type="image/png">
-	<link rel="icon" href="images/newfavicon.png" type="image/png" sizes="32x32">
-	<link rel="icon" href="images/newfavicon.png" type="image/png" sizes="16x16">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="180x180">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="152x152">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="144x144">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="120x120">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="114x114">
-	<link rel="apple-touch-icon" href="images/newfavicon.png" sizes="72x72">
+	<link rel="shortcut icon" href="./images/newfavicon.png" type="image/png">
+	<link rel="icon" href="./images/newfavicon.png" type="image/png" sizes="32x32">
+	<link rel="icon" href="./images/newfavicon.png" type="image/png" sizes="16x16">
+	<link rel="apple-touch-icon" href="./images/newfavicon.png" sizes="180x180">
+	<link rel="apple-touch-icon" href="./images/newfavicon.png" sizes="152x152">
+	<link rel="apple-touch-icon" href="./images/newfavicon.png" sizes="144x144">
+	<link rel="apple-touch-icon" href="./images/newfavicon.png" sizes="120x120">
+	<link rel="apple-touch-icon" href="./images/newfavicon.png" sizes="114x114">
+	<link rel="apple-touch-icon" href="./images/newfavicon.png" sizes="72x72">
 	
 	<!-- ==============================================
 	CSS VENDOR
@@ -37,9 +37,29 @@
 	<!-- ==============================================
 	Custom Stylesheet
 	=============================================== -->
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	
 	<style>
+@media (max-width: 767px) {
+	.custom-dropdown-content a[href^="mailto"] {
+		font-size: 14px !important;
+	}
+	.page-header .col-12.text-center {
+		text-align: center !important;
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		justify-content: center !important;
+		padding: 0 !important;
+	}
+	.page-header .col-12.text-center img[alt="Harmony@Home Logo"] {
+	margin: 0 auto !important;
+		 display: block !important;
+		 max-width: 80vw !important;
+		 height: auto !important;
+		 /* margin-top: 0 !important; */
+	}
+}
 		.topbar .dropdown:hover > .dropdown-menu {
 			display: block !important;
 		}
@@ -47,6 +67,14 @@
   .spacer-90 { display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
   .about-scrapbook {
     width: 90% !important;
+				.section[style*="padding-top: 0px; padding-bottom: 40px;"] .content-wrap.pb-0 {
+					 margin-top: 8px !important;
+				}
+@media (max-width: 767px) {
+	.section[style*="padding-top: 0px; padding-bottom: 40px;"] .container .row.align-items-center > .col-sm-12.col-md-12.col-lg-7 {
+		margin-top: 0 !important;
+	}
+}
     max-width: 90% !important;
     margin-top: 24px !important;
   }
@@ -129,7 +157,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center" style="line-height: 0;">
-						<img src="images/NEW H@H LOGO 3 (900 x 500 px).png" alt="Harmony@Home Logo" style="max-width: 50%; height: auto; margin: 0; vertical-align: bottom;">
+						<img src="./images/NEW H@H LOGO 3 (900 x 500 px).png" alt="Harmony@Home Logo" style="max-width: 50%; height: auto; margin: 0; vertical-align: bottom;">
 						<hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, #e0828c, transparent); margin: -50px auto 0 auto; width: 40%; opacity: 0.6;">
 					</div>
 				</div>
@@ -140,11 +168,11 @@
 
 
 	<!-- WHY CHOOSE US -->
-	<div class="section" style="padding-top: 20px; padding-bottom: 40px;">
-		<div class="content-wrap pb-0">
+	<div class="section" style="padding-top: 0px; padding-bottom: 40px;">
+	<div class="content-wrap pb-0" style="margin-top: 0;">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-sm-12 col-md-12 col-lg-7">
+					<div class="col-sm-12 col-md-12 col-lg-7" style="margin-top: 0;">
 						<p style="color: #c5606b; font-size: 18px; font-weight: 600; margin-bottom: 10px;">Meet Our Founder ♡</p>
 						<h3 class="mb-5" style="color: #f2b5b8; font-size: 28px; font-weight: 600; margin-left: 0; text-align: left;">
 							Ajonay Harris
@@ -154,89 +182,222 @@
 						<p class="">From first feedings to first performances, our agency is built to meet families wherever they are — with personalized support, dependable communication, and a deep respect for your home, your children, and your values.</p>
 						<p class="">Harmony@Home isn't just a service. It's a partnership built on trust, alignment, and care that feels like family.</p>
 						
-						<!-- References Link -->
-						<div style="margin-top: 40px; text-align: center;">
-							<a href="mailto:ajonay@harmonyathomechildcare.com?subject=References%20%26%20Certifications%20Request&body=Hey%20Ajonay%2C%20we%20are%20reaching%20out%20to%20request%20your%20references%20and%20certifications%20to%20potentially%20start%20services%20with%20you%21" style="
-								background: linear-gradient(135deg, #7aa5fd 0%, #5a89fc 100%);
-								color: white;
-								padding: 15px 30px;
-								border-radius: 8px;
-								text-decoration: none;
-								font-weight: 600;
-								font-size: 16px;
-								display: inline-block;
-								transition: all 0.3s ease;
-								box-shadow: 0 4px 12px rgba(122, 165, 253, 0.3);
-							" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(122, 165, 253, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(122, 165, 253, 0.3)'">
-								Request References & Certifications
-							</a>
-						</div>
-						
-						<div class="spacer-90"></div>
-					</div>
-					<div class="col-sm-12 col-md-12 col-lg-5 mobile-image-fix">
-						<div style="position: relative; display: flex; justify-content: flex-end; align-items: flex-start; padding: 0; margin-top: -100px; margin-right: -50px; margin-left: -20px;">
-							<img src="images/harmony@home scrapbook.png?v=123456" alt="Harmony@Home Scrapbook Memories" class="img-fluid about-scrapbook" style="
-								box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-								border-radius: 8px;
-								width: 120%;
-								max-width: 120%;
-								height: auto;
-								z-index: 5;
+						<!-- ...existing code... -->
+						<div id="mobile-img-link-container" style="display:none;"></div>
+
+						<!-- Popup Modal -->
+						<div id="provider-modal" style="
+							display: none;
+							position: fixed;
+							z-index: 99999;
+							left: 0;
+							top: 0;
+							width: 100vw;
+							height: 100vh;
+							overflow: auto;
+							background: rgba(0,0,0,0.45);
+						">
+							<div style="
+								background: #fff;
+								margin: 60px auto;
+								padding: 32px 24px 24px 24px;
+								border-radius: 12px;
+								max-width: 400px;
+								box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+								position: relative;
+								text-align: left;
 							">
-							<style>
-								@media (max-width: 768px) {
-									.about-scrapbook {
-										width: 75% !important;
-										max-width: 75% !important;
-									}
-									.mobile-image-fix div {
-										margin-top: -50px !important;
-									}
-								}
-							</style>
+									<span onclick="document.getElementById('provider-modal').style.display='none'" style="
+										position: absolute;
+										top: 16px;
+										right: 18px;
+										font-size: 22px;
+										color: #e4868e;
+										cursor: pointer;
+										font-weight: bold;
+									">&times;</span>
+									<h4 style="color: #e4868e; margin-bottom: 18px;">Instructions</h4>
+									<ol style="color: #333; font-size: 16px; margin-bottom: 24px;">
+										<li>Select your service and sub service.</li>
+										<li>Make sure to select <b>Request Ajonay as Provider</b> in the drop down on the form.</li>
+										<li>Send us a text letting us know you filled out your form and requested Ajonay for care!</li>
+									</ol>
+								<div style="text-align: center; margin-top: 18px;">
+											<a href="page-faq.html" style="
+												background: #e4868e;
+												color: white;
+												padding: 10px 22px;
+												border-radius: 6px;
+												text-decoration: none;
+												font-weight: 600;
+												font-size: 15px;
+												display: inline-block;
+												margin-top: 8px;
+												box-shadow: 0 2px 8px rgba(228,134,142,0.15);
+											">Choose Your Service</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-5 mobile-image-fix" style="margin-top: 72px;">
+						<div id="desktop-img-link-box">
+							<div class="about-img-wrapper" style="position: relative; display: flex; justify-content: center; align-items: flex-start; padding: 0; margin-top: 0; margin-right: 0; margin-left: 0; margin-bottom: 24px; z-index: 1;">
+								<img src="./images/harmony@home scrapbook.png?v=123456" alt="Harmony@Home Scrapbook Memories" class="img-fluid about-scrapbook" style="border-radius: 8px; width: 100%; max-width: 400px; height: auto; z-index: 1; position: relative; background: #fff; margin-top: 0; display: block;">
+							</div>
+							<div class="custom-dropdown" style="max-width: 400px; margin: 0 auto 24px auto; text-align: center; position: relative;">
+								<button class="custom-dropbtn" style="width: 100%; background: #e4868e; border-radius: 8px; font-size: 18px; font-weight: 700; padding: 16px 0; border: none; color: #fff; cursor: pointer; box-shadow: 0 2px 8px rgba(228,134,142,0.10); outline: none;">Connect With Ajonay &#9662;</button>
+								<div class="custom-dropdown-content" style="display: none; position: absolute; left: 0; right: 0; top: 100%; z-index: 9999; background: #fbe3ea; border-radius: 0; box-shadow: 0 4px 24px rgba(122,165,253,0.10);">
+									<a href="mailto:ajonay@harmonyathomechildcare.com?subject=References%20%26%20Certifications%20Request&body=Hey%20Ajonay%2C%20we%20are%20reaching%20out%20to%20request%20your%20references%20and%20certifications%20to%20potentially%20start%20services%20with%20you%21" style="color: #333; font-weight: 600; display: block; padding: 16px; text-align: left; text-decoration: none;">Request References & Certifications</a>
+									<div style="height:1px; background:#fff; opacity:0.25; margin:0 16px;"></div>
+									<a href="#" id="request-provider-link" onclick="document.getElementById('provider-modal').style.display='block'; return false;" style="color: #333; font-weight: 600; font-size: 16px; display: block; padding: 16px; text-align: left; text-decoration: none;">Request Ajonay As Your Provider</a>
+									<div style="height:1px; background:#fff; opacity:0.25; margin:0 16px;"></div>
+									<a href="https://forms.gle/uo7L6Mnoa9YycBHh7" target="_blank" style="color: #333; font-weight: 600; font-size: 16px; display: block; padding: 16px; text-align: left; text-decoration: none;">Request An In-Person or Virtual Consultation</a>
+								</div>
+							</div>
+						</div>
+		<script>
+		// Move image/link box up for mobile
+		document.addEventListener('DOMContentLoaded', function() {
+			function moveImgLinkMobile() {
+				var mobile = window.innerWidth <= 767;
+				var mobileTarget = document.getElementById('mobile-img-link-container');
+				var desktopBox = document.getElementById('desktop-img-link-box');
+				if (mobile && mobileTarget && desktopBox) {
+					mobileTarget.style.display = 'block';
+					mobileTarget.innerHTML = desktopBox.innerHTML;
+					desktopBox.style.display = 'none';
+				} else if (!mobile && mobileTarget && desktopBox) {
+					mobileTarget.style.display = 'none';
+					desktopBox.style.display = 'block';
+				}
+			}
+			moveImgLinkMobile();
+			window.addEventListener('resize', moveImgLinkMobile);
+		});
+		</script>
+																														<!-- Removed scrollable and max-height for mobile. Dropdown will fully expand and overlay content if needed. -->
+																								<script>
+																		// Responsive dropdown toggle with direction awareness
+																		document.addEventListener('DOMContentLoaded', function() {
+																			var btn = document.querySelector('.custom-dropbtn');
+																			var menu = document.querySelector('.custom-dropdown-content');
+																			// Close dropdown when any link inside is clicked
+																			menu.querySelectorAll('a').forEach(function(link) {
+																				link.addEventListener('click', function() {
+																					menu.style.display = 'none';
+																				});
+																			});
+																			btn.addEventListener('click', function(e) {
+																				e.stopPropagation();
+																				if (window.innerWidth <= 767) {
+																					// Mobile: dropdown expands downward, pushes image/button up, stays visually connected
+																					menu.style.position = 'relative';
+																					menu.style.left = '';
+																					menu.style.right = '';
+																					menu.style.top = '100%';
+																					menu.style.bottom = '';
+																					menu.style.width = '100%';
+																					menu.style.zIndex = '2';
+																					menu.style.maxHeight = 'none';
+																					menu.style.overflowY = 'visible';
+																					menu.style.display = 'block';
+																					// Scroll so dropdown is fully visible if near bottom
+																					setTimeout(function() {
+																						var dropdownBox = btn.closest('.custom-dropdown');
+																						if (dropdownBox) {
+																							var boxRect = dropdownBox.getBoundingClientRect();
+																							var menuRect = menu.getBoundingClientRect();
+																							if (menuRect.bottom > window.innerHeight) {
+																								var scrollY = window.scrollY + menuRect.bottom - window.innerHeight + 24;
+																								window.scrollTo({ top: scrollY, behavior: 'smooth' });
+																							} else {
+																								var scrollY = window.scrollY + boxRect.top - 24;
+																								window.scrollTo({ top: scrollY, behavior: 'smooth' });
+																							}
+																						}
+																					}, 120);
+																				} else {
+																					// Desktop/tablet: normal dropdown logic
+																					var rect = btn.getBoundingClientRect();
+																					var menuHeight = menu.offsetHeight || 160;
+																					var spaceBelow = window.innerHeight - rect.bottom;
+																					var spaceAbove = rect.top;
+																					menu.style.top = '100%';
+																					menu.style.bottom = '';
+																					menu.style.maxHeight = '';
+																					menu.style.overflowY = '';
+																					if (spaceBelow < menuHeight && spaceAbove > menuHeight) {
+																						menu.style.top = '';
+																						menu.style.bottom = '100%';
+																						menu.style.maxHeight = spaceAbove + 'px';
+																						menu.style.overflowY = 'auto';
+																					}
+																					menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+																				}
+																			});
+																			document.addEventListener('click', function(e) {
+																				if (!e.target.closest('.custom-dropdown')) {
+																					menu.style.display = 'none';
+																				}
+																			});
+																			window.addEventListener('resize', function() {
+																				if (menu.style.display === 'block') {
+																					menu.style.display = 'none';
+																				}
+																			});
+																		});
+																		</script>
 						</div>
 						<style>
-							@media (max-width: 1199px) {
-								.col-sm-12.col-md-12.col-lg-5 > div {
-									margin-right: -100px !important;
-									margin-left: 40px !important;
-								}
-								.col-sm-12.col-md-12.col-lg-5 img {
-									width: 160% !important;
-									max-width: 160% !important;
-								}
-							}
+							/* Ensure image never overlaps text and always stacks below on mobile */
 							@media (max-width: 991px) {
-								.col-sm-12.col-md-12.col-lg-5 > div {
-									margin-top: 20px !important;
-									margin-right: 0 !important;
-									margin-left: 0 !important;
+								.about-img-wrapper {
 									justify-content: center !important;
+									margin-top: 0 !important;
+									margin-bottom: 8px !important;
 								}
-								.col-sm-12.col-md-12.col-lg-5 img {
-									width: 75% !important;
-									max-width: 75% !important;
-									transform: rotate(0deg) !important;
+								.about-scrapbook {
+									width: 80% !important;
+									max-width: 320px !important;
+									margin: 0 auto !important;
+									display: block !important;
+									position: relative !important;
+									z-index: 1 !important;
+								}
+								.custom-dropdown {
+									margin-top: 0 !important;
+									margin-bottom: 8px !important;
 								}
 							}
 							@media (max-width: 767px) {
-								.col-sm-12.col-md-12.col-lg-5 > div {
-									margin-top: -20px !important;
-									padding: 20px !important;
+								.about-img-wrapper {
+									margin-top: 0 !important;
+									margin-bottom: 8px !important;
+									padding: 0 !important;
 								}
-								.col-sm-12.col-md-12.col-lg-5 img {
-									width: 75% !important;
-									max-width: 75% !important;
-									box-shadow: 0 12px 25px rgba(0,0,0,0.2) !important;
+								.about-scrapbook {
+									width: 90% !important;
+									max-width: 90vw !important;
+									margin: 0 auto !important;
+									box-shadow: 0 12px 25px rgba(0,0,0,0.18) !important;
+								}
+								.custom-dropdown {
+									margin-top: 0 !important;
+									margin-bottom: 8px !important;
 								}
 							}
 							@media (max-width: 480px) {
-								.col-sm-12.col-md-12.col-lg-5 img {
-									width: 70% !important;
-									max-width: 70% !important;
-									box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+								.about-scrapbook {
+									width: 98% !important;
+									max-width: 98vw !important;
+									box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
 								}
+							}
+							/* Add clearfix for row to prevent overlap */
+							.row.align-items-center::after {
+								content: "";
+								display: table;
+								clear: both;
 							}
 						</style>
 					</div>
@@ -278,20 +439,66 @@
 		
 	</div>
 	
-	<!-- JS VENDOR -->
-	<script src="js/vendor/jquery.min.js"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="js/vendor/owl.carousel.js"></script>
-	<script src="js/vendor/jquery.magnific-popup.min.js"></script>
-	<script src="js/vendor/isotope.pkgd.min.js"></script>
-	<script src="js/vendor/imagesloaded.pkgd.min.js"></script>
-
-	<!-- SENDMAIL -->
-	<script src="js/vendor/validator.min.js"></script>
-	<script src="js/vendor/form-scripts.js"></script>
-
-	<script src="js/script.js"></script>
-	
-
 </body>
-</html>
+		<!-- JS VENDOR: Ensure jQuery and Bootstrap are loaded first -->
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/bootstrap.min.js"></script>
+		<script src="js/vendor/owl.carousel.js"></script>
+		<script src="js/vendor/jquery.magnific-popup.min.js"></script>
+		<script src="js/vendor/isotope.pkgd.min.js"></script>
+		<script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+
+		<!-- SENDMAIL -->
+		<script src="js/vendor/validator.min.js"></script>
+		<script src="js/vendor/form-scripts.js"></script>
+
+		<script src="./js/script.js"></script>
+
+			<!-- Robust fallback: Toggle dropdown manually if Bootstrap fails -->
+			<script>
+					e.preventDefault();
+					e.stopPropagation();
+					if (window.innerWidth <= 767) {
+						// Mobile: always toggle open/close reliably
+						if (menu.style.display === 'block') {
+							menu.style.display = 'none';
+						} else {
+							menu.style.position = 'relative';
+							menu.style.left = '';
+							menu.style.right = '';
+							menu.style.top = '100%';
+							menu.style.bottom = '';
+							menu.style.width = '100%';
+							menu.style.zIndex = '2';
+							menu.style.maxHeight = 'none';
+							menu.style.overflowY = 'visible';
+							menu.style.display = 'block';
+							setTimeout(function() {
+								var menuRect = menu.getBoundingClientRect();
+								if (menuRect.bottom > window.innerHeight) {
+									window.scrollBy({ top: menuRect.bottom - window.innerHeight + 24, behavior: 'smooth' });
+								}
+							}, 120);
+						}
+					} else {
+						// Desktop/tablet: always toggle open/close reliably
+						if (menu.style.display === 'block') {
+							menu.style.display = 'none';
+						} else {
+							var rect = btn.getBoundingClientRect();
+							var menuHeight = menu.offsetHeight || 160;
+							var spaceBelow = window.innerHeight - rect.bottom;
+							var spaceAbove = rect.top;
+							menu.style.top = '100%';
+							menu.style.bottom = '';
+							menu.style.maxHeight = '';
+							menu.style.overflowY = '';
+							if (spaceBelow < menuHeight && spaceAbove > menuHeight) {
+								menu.style.top = '';
+								menu.style.bottom = '100%';
+								menu.style.maxHeight = spaceAbove + 'px';
+								menu.style.overflowY = 'auto';
+							}
+							menu.style.display = 'block';
+						}
+					}
