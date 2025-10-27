@@ -40,6 +40,13 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	
 	<style>
+	/* Force left alignment for section headings and blurbs */
+	.about-section-title, .about-section-blurb {
+		text-align: left !important;
+		margin-left: 0 !important;
+	}
+	</style>
+<style>
 @media (max-width: 767px) {
 	.custom-dropdown-content a[href^="mailto"] {
 		font-size: 14px !important;
@@ -60,18 +67,18 @@
 		 /* margin-top: 0 !important; */
 	}
 }
-		.topbar .dropdown:hover > .dropdown-menu {
-			display: block !important;
+.topbar .dropdown:hover > .dropdown-menu {
+	display: block !important;
+}
+@media (max-width: 768px) {
+	.spacer-90 { display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
+	.about-scrapbook {
+		width: 90% !important;
+		.section[style*="padding-top: 0px; padding-bottom: 40px;"] .content-wrap.pb-0 {
+			margin-top: 8px !important;
 		}
-		@media (max-width: 768px) {
-  .spacer-90 { display: none !important; height: 0 !important; margin: 0 !important; padding: 0 !important; }
-  .about-scrapbook {
-    width: 90% !important;
-				.section[style*="padding-top: 0px; padding-bottom: 40px;"] .content-wrap.pb-0 {
-					 margin-top: 8px !important;
-				}
-@media (max-width: 767px) {
-	.section[style*="padding-top: 0px; padding-bottom: 40px;"] .container .row.align-items-center > .col-sm-12.col-md-12.col-lg-7 {
+		@media (max-width: 767px) {
+			.section[style*="padding-top: 0px; padding-bottom: 40px;"] .container .row.align-items-center > .col-sm-12.col-md-12.col-lg-7 {
 		margin-top: 0 !important;
 	}
 }
@@ -168,21 +175,33 @@
 
 
 	<!-- WHY CHOOSE US -->
-	<div class="section" style="padding-top: 0px; padding-bottom: 40px;">
-	<div class="content-wrap pb-0" style="margin-top: 0;">
+	<div class="section" style="padding-top: 10px; padding-bottom: 40px;">
+		<div class="content-wrap pb-0" style="margin-top: -30px;">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-sm-12 col-md-12 col-lg-7" style="margin-top: 0;">
-						<p style="color: #c5606b; font-size: 18px; font-weight: 600; margin-bottom: 10px;">Meet Our Founder ♡</p>
-						<h3 class="mb-5" style="color: #f2b5b8; font-size: 28px; font-weight: 600; margin-left: 0; text-align: left;">
-							Ajonay Harris
+				<div class="row align-items-start">
+					<div class="col-sm-12 col-md-10 col-lg-8">
+						<!-- Removed Meet Our Founder -->
+						<h3 class="mb-2" style="color: #f2b5b8; font-size: 28px; font-weight: 600; margin-left: 0; text-align: left; margin-bottom: 12px;">
+							About Us
 						</h3>
-						<p class="">Welcome to Harmony@Home, a boutique childcare agency founded by Ajonay — a seasoned nanny, dance educator, and mentor with over 10 years of hands-on experience. After a decade of caring for children from newborn through the teen years, Ajonay created Harmony@Home to redefine what quality in-home care truly means: intentional, nurturing, and in rhythm with each family's unique flow.</p>
-						<p class="">At Harmony@Home, we believe that childcare is more than supervision — it's connection. Our caregivers are hand-selected for their ability to create structure without rigidity, encourage creativity, and cultivate a calm, joyful environment where children can grow confidently.</p>
-						<p class="">From first feedings to first performances, our agency is built to meet families wherever they are — with personalized support, dependable communication, and a deep respect for your home, your children, and your values.</p>
-						<p class="">Harmony@Home isn't just a service. It's a partnership built on trust, alignment, and care that feels like family.</p>
-						
+
+
+						<div style="display: flex; align-items: flex-start; gap: 32px;">
+							<p class="" style="margin-bottom: 0;">At Harmony@Home, Ajonay specializes in connecting families with “unicorn” nannies—caregivers who are experienced, reliable, and intuitive. Ajonay is actively working in the childcare field every day, so she understands the real challenges families face and what it takes to find a caregiver who truly fits. Every placement is more than a match; it’s a partnership built on trust, experience, and insight, ensuring your child thrives in a nurturing environment. From first feedings to first performances, Ajonay has built a system to meet families wherever they are — with personalized support, dependable communication, and a deep respect for your home, your children, and your values. Harmony@Home isn't just a service. It's support for your family built on trust, alignment, and care that feels customized.</p>
+													<img src="images/nannyfunton.jpg" alt="Nanny Funton" style="width: 180px; height: 320px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+						</div>
 						<!-- ...existing code... -->
+
+
+
+
+
+						<div style="height:32px;"></div>
+						<h3 class="mb-2 about-section-title" style="color: #f2b5b8; font-size: 28px; font-weight: 600; margin-bottom: 12px;">Meet Ajonay</h3>
+						<div style="display: flex; align-items: flex-start; gap: 32px;">
+								<p class="about-section-blurb" style="margin-bottom: 0;">Ajonay, the founder of Harmony@Home, is a youth dance teacher with over 12 years of hands-on experience raising children—from infants to high school graduates. Her background blends structure, creativity, and empathy, allowing her to truly understand what families and children need at every stage. That real-world experience is the heart of Harmony@Home’s mission: connecting families with nannies who are not only skilled, but genuinely invested in each child’s growth and happiness.</p>
+								<img src="images/Destiny Ajonay 3.jpg" alt="Destiny Ajonay" style="width: 180px; height: 180px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+						</div>
 						<div id="mobile-img-link-container" style="display:none;"></div>
 
 						<!-- Popup Modal -->
@@ -240,21 +259,6 @@
 						</div>
 					</div>
 					<div class="col-sm-12 col-md-12 col-lg-5 mobile-image-fix" style="margin-top: 72px;">
-						<div id="desktop-img-link-box">
-							<div class="about-img-wrapper" style="position: relative; display: flex; justify-content: center; align-items: flex-start; padding: 0; margin-top: 0; margin-right: 0; margin-left: 0; margin-bottom: 24px; z-index: 1;">
-								<img src="./images/harmony@home scrapbook.png?v=123456" alt="Harmony@Home Scrapbook Memories" class="img-fluid about-scrapbook" style="border-radius: 8px; width: 100%; max-width: 400px; height: auto; z-index: 1; position: relative; background: #fff; margin-top: 0; display: block;">
-							</div>
-							<div class="custom-dropdown" style="max-width: 400px; margin: 0 auto 24px auto; text-align: center; position: relative;">
-								<button class="custom-dropbtn" style="width: 100%; background: #e4868e; border-radius: 8px; font-size: 18px; font-weight: 700; padding: 16px 0; border: none; color: #fff; cursor: pointer; box-shadow: 0 2px 8px rgba(228,134,142,0.10); outline: none;">Connect With Ajonay &#9662;</button>
-								<div class="custom-dropdown-content" style="display: none; position: absolute; left: 0; right: 0; top: 100%; z-index: 9999; background: #fbe3ea; border-radius: 0; box-shadow: 0 4px 24px rgba(122,165,253,0.10);">
-									<a href="mailto:ajonay@harmonyathomechildcare.com?subject=References%20%26%20Certifications%20Request&body=Hey%20Ajonay%2C%20we%20are%20reaching%20out%20to%20request%20your%20references%20and%20certifications%20to%20potentially%20start%20services%20with%20you%21" style="color: #333; font-weight: 600; display: block; padding: 16px; text-align: left; text-decoration: none;">Request References & Certifications</a>
-									<div style="height:1px; background:#fff; opacity:0.25; margin:0 16px;"></div>
-									<a href="mailto:ajonay@harmonyathomechildcare.com?subject=Direct%20Care%20From%20Ajonay%20Request&body=Hi%20Ajonay%2C%0A%0AI%20have%20completed%20the%20correct%20%20Harmony@Home%20Care%20Request%20Form%20and%20would%20like%20to%20book%20directly%20with%20you.%20Here%20are%20the%20details%3A%0A%0A%E2%80%A2%20Parent%20Name%3A%0A%E2%80%A2%20Phone%20Number%3A%0A%E2%80%A2%20Location%20of%20Care%3A%0A%E2%80%A2%20Dates%20Requested%3A%0A%E2%80%A2%20Hours%20of%20Care%3A%0A%E2%80%A2%20Type%20of%20Service%20%28backup%2C%20overnight%2C%20etc.%29%3A%0A%0AThank%20you%20for%20reviewing%20my%20request!%0A%0A%E2%80%94%20%5BYour%20Name%5D%0A%0A_%2Aplease%20fill%20out%20the%20form%20first%20and%20then%20send%20this%20message.%20coordination%2C%20registration%2C%20placement%20fees%20do%20not%20apply%20when%20booking%20care%20with%20me.%2A_" style="color: #333; font-weight: 600; font-size: 16px; display: block; padding: 16px; text-align: left; text-decoration: none;">Request Ajonay As Your Provider</a>
-									<div style="height:1px; background:#fff; opacity:0.25; margin:0 16px;"></div>
-									<a href="https://forms.gle/uo7L6Mnoa9YycBHh7" target="_blank" style="color: #333; font-weight: 600; font-size: 16px; display: block; padding: 16px; text-align: left; text-decoration: none;">Request An In-Person or Virtual Consultation</a>
-								</div>
-							</div>
-						</div>
 		<script>
 		// Move image/link box up for mobile
 		document.addEventListener('DOMContentLoaded', function() {

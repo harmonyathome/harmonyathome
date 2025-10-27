@@ -977,6 +977,30 @@ blockquote.quote {
   -ms-border-radius: 30px;
   border-radius: 30px; }
 
+/* Force service boxes to be wide and short on request-ajonay.html */
+.rs-icon-info-4.service-box-ajonay {
+  max-width: 600px !important;
+  width: 600px !important;
+  min-height: 180px !important;
+  height: 180px !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.service-box-ajonay {
+  max-width: 240px !important;
+  width: 240px !important;
+  min-height: 370px !important;
+  height: 370px !important;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.service-box-ajonay h3 {
+  font-size: 1.1rem !important;
+  margin-bottom: 10px !important;
+}
+
 .btn-default {
   background-color: #FD4D40;
   color: #ffffff;
