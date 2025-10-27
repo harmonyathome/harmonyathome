@@ -60,11 +60,30 @@
 		padding: 0 !important;
 	}
 	.page-header .col-12.text-center img[alt="Harmony@Home Logo"] {
-	margin: 0 auto !important;
-		 display: block !important;
-		 max-width: 80vw !important;
-		 height: auto !important;
-		 /* margin-top: 0 !important; */
+		margin: 0 auto !important;
+		display: block !important;
+		max-width: 80vw !important;
+		height: auto !important;
+		/* margin-top: 0 !important; */
+	}
+	/* Stack image below text and improve word wrapping for About sections */
+	.section .row.align-items-start > .col-sm-12.col-md-10.col-lg-8 > div[style*="display: flex"] {
+		flex-direction: column !important;
+		gap: 18px !important;
+		align-items: stretch !important;
+	}
+	.section .row.align-items-start > .col-sm-12.col-md-10.col-lg-8 p {
+		word-break: break-word !important;
+		white-space: normal !important;
+		font-size: 17px !important;
+		line-height: 1.6 !important;
+	}
+	.section .row.align-items-start > .col-sm-12.col-md-10.col-lg-8 img {
+		width: 100% !important;
+		max-width: 320px !important;
+		height: auto !important;
+		margin: 0 auto !important;
+		display: block !important;
 	}
 }
 .topbar .dropdown:hover > .dropdown-menu {

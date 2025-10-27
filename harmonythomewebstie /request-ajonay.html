@@ -16,6 +16,39 @@
       object-fit: cover;
       object-position: top;
     }
+    /* Mobile only: Center logo image and hide right divider */
+    @media (max-width: 767px) {
+      .section.page-header .col-12.text-center {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+      }
+      .section.page-header .col-12.text-center img[alt="Harmony@Home Logo"] {
+        margin: 0 auto !important;
+        display: block !important;
+        max-width: 80vw !important;
+        height: auto !important;
+      }
+      /* Hide all right-side decorative circles on mobile (by border-radius and right property) */
+      div[style*="position: absolute;"][style*="right"][style*="border-radius: 50%"] {
+        display: none !important;
+      }
+      /* Stack service boxes and match width to References & Certifications link */
+      .container[style*="max-width: 1100px"] {
+        flex-direction: column !important;
+        gap: 18px !important;
+        align-items: stretch !important;
+      }
+      .service-box-ajonay {
+        width: 100% !important;
+        max-width: 700px !important;
+        margin: 0 auto 12px auto !important;
+        box-sizing: border-box !important;
+        max-width: 95vw !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+    }
   </style>
   <link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/vendor/owl.carousel.min.css">
@@ -81,8 +114,12 @@
           <div class="container">
             <div class="row">
               <div class="col-12 text-center" style="line-height: 0;">
-                <img src="./images/NEW H@H LOGO 3 (900 x 500 px).png" alt="Harmony@Home Logo" style="max-width: 50%; height: auto; margin: 0; vertical-align: bottom;">
-                <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, #e0828c, transparent); margin: -50px auto 0 auto; width: 40%; opacity: 0.6;">
+        <img src="./images/NEW H@H LOGO 3 (900 x 500 px).png" alt="Harmony@Home Logo" style="max-width: 50%; height: auto; margin: 0; vertical-align: bottom;">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <hr style="border: none; height: 1px; background: linear-gradient(to right, transparent, #e0828c, transparent); margin: 12px auto 0 auto; width: 40%; opacity: 0.6;">
               </div>
             </div>
           </div>
